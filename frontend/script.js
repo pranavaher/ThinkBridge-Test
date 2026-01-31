@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   const container = document.getElementById('invoice-container');
 
   try {
-    const resp = await fetch('/api/invoice');
+    const params = new URLSearchParams(window.location.search);
+    const invoiceId = params.get('invoiceId') || '1';
+
+    const resp = await fetch(`/api/invoice?invoiceId=${encodeURIComponent(invoiceId)}`);
     if (!resp.ok) {
       const text = await resp.text();
       throw new Error(`HTTP ${resp.status}: ${text}`);
@@ -20,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           <div class="invoice-meta">
             <span class="pill">Invoice #${escapeHtml(data.invoiceId)}</span>
             <span class="pill">Customer: ${escapeHtml(data.customerName)}</span>
+            <a class="pill pill-link" href="/invoices.html">Browse all</a>
           </div>
         </div>
         <div class="invoice-total">

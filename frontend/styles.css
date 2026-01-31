@@ -73,6 +73,39 @@ body {
   font-size: 13px;
 }
 
+.nav {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 18px 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.nav-link.active {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(124, 58, 237, 0.55);
+  background: rgba(124, 58, 237, 0.12);
+}
+
+.pill-link {
+  text-decoration: none;
+}
+
 .content {
   max-width: 980px;
   width: 100%;
@@ -138,6 +171,43 @@ body {
   letter-spacing: 0.2px;
 }
 
+.filters {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.filter {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+}
+
+.filter-label {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 12px;
+}
+
+.select {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-width: 220px;
+}
+
+.select:focus {
+  outline: none;
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.20);
+}
+
+.select option {
+  color: #111827;
+}
+
 .cards-title {
   margin: 14px 4px 10px;
   color: rgba(255, 255, 255, 0.80);
@@ -195,6 +265,29 @@ body {
   font-size: 20px;
   font-weight: 780;
   letter-spacing: 0.2px;
+}
+
+.card-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 13px;
+}
+
+.card-link {
+  padding: 0;
+}
+
+.card-a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 14px 14px 16px;
 }
 
 .empty {
@@ -297,6 +390,10 @@ body {
   .invoice-total {
     width: 100%;
     text-align: left;
+  }
+  .select {
+    width: 100%;
+    min-width: 0;
   }
 }
 

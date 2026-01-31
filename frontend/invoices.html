@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Invoices</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <div class="brand-title">Invoice Viewer</div>
+            <div class="brand-subtitle">Browse invoices by customer</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="/">Invoice</a>
+          <a class="nav-link active" href="/invoices.html">All invoices</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="invoice-shell" aria-live="polite">
+          <div class="invoice-header">
+            <div>
+              <h1 class="invoice-title">All invoices</h1>
+              <div class="invoice-meta">
+                <span class="pill">Tip: open an invoice to view items</span>
+              </div>
+            </div>
+            <div class="filters">
+              <label class="filter">
+                <span class="filter-label">Customer</span>
+                <select id="customer-select" class="select">
+                  <option value="">All customers</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div id="invoices-container">
+            <div class="skeleton">
+              <div class="skeleton-line w-35"></div>
+              <div class="skeleton-grid">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Backend: <code>/api/invoices</code> • <code>/api/invoices/customers</code></span>
+      </footer>
+    </div>
+
+    <script src="invoices.js"></script>
+  </body>
+</html>
+
