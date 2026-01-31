@@ -12,12 +12,14 @@ CREATE TABLE InvoiceItems (
 );
 
 INSERT INTO Invoices (InvoiceID, CustomerName) VALUES
+(1, 'John Doe'),
 (2, 'Alice Smith'),
 (3, 'Bob Johnson'),
 (4, 'Emma Wilson');
 
 INSERT INTO InvoiceItems (ItemID, InvoiceID, Name, Price) VALUES
 -- Invoice 1 (John Doe)
+(1, 1, 'Widget A', 19.99)
 (2, 1, 'Widget B', 29.99),
 (3, 1, 'Widget C', 9.99),
 
