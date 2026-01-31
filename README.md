@@ -44,3 +44,13 @@ Then open:
 - `http://localhost:5000/swagger` — **Swagger UI (API docs)**
 - `http://localhost:5000/swagger/v1/swagger.json` — **OpenAPI JSON**
 
+## Screenshots
+
+### All invoices (all users)
+![All invoices](docs/screenshots/AllUsersPage.png)
+
+### Invoices for a single user
+![User invoices](docs/screenshots/InvoicesFromOneUser.png)
+
+### Swagger UI
+![Swagger UI](docs/screenshots/Swagger.png)
