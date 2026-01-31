@@ -1,0 +1,31 @@
+# Build output
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE folders
+.vs/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+
+# Logs
+*.log
+
+# Local secrets (keep examples in repo instead)
+**/appsettings.*.local.json
+**/appsettings.Local.json
+**/appsettings.local.json
+
+# If you later add a Node build step
+node_modules/
+dist/
+build/
+
